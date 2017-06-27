@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext');
+
+$pearson-quarks--black: #000000;
+$pearson-quarls--light_gray: lightgray;
+$pearson-quarks--white: #FFFFFF;
+
+
+$pearson-quarks--font-size: 10px;
+$pearson-quarks--font-family: 'Roboto';
+
+@mixin pearson-quarks--h1-font(){
+  font-size: $pearson-quarks--font-size * 3;
+}
+
+@mixin pearson-quarks--h2-font(){
+  font-size: $pearson-quarks--font-size * 2;
+}
+
+@mixin pearson-quarks--standard-font(){
+  font-size: $pearson-quarks--font-size * 1.5;
+}

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext");
+body {
+  align-items: center;
+  background: #FFFFFF;
+  display: flex;
+  font-family: "Roboto";
+  font-size: 10px;
+  justify-content: center;
+  margin: 0;
+  padding: 0; }
+  @media screen and (min-device-width: 960px) and (min-width: 960px) {
+    body .page {
+      width: 960px; } }
+  body .page header {
+    margin: 10px 0;
+    width: 100%; }
+    @media screen and (min-device-width: 960px) and (min-width: 960px) {
+      body .page header {
+        margin: 50px 0 100px 0; } }
+  body .page .main {
+    display: flex;
+    flex-direction: column; }
+    @media screen and (min-device-width: 960px) and (min-width: 960px) {
+      body .page .main {
+        flex-direction: row; } }
+    body .page .main .content {
+      font-size: 20px;
+      margin: 0 10px; }
+      @media screen and (min-device-width: 960px) and (min-width: 960px) {
+        body .page .main .content {
+          width: calc(768px - 20px); }
+          body .page .main .content--fixed {
+            margin: 0 10px 0 calc(960px - 768px + 10px); } }
+      body .page .main .content article {
+        margin: 0 0 100px 0; }
+    @media screen and (min-device-width: 960px) and (min-width: 960px) {
+      body .page .main .menu {
+        width: calc(960px - 768px); } }
+    body .page .main .menu--fixed {
+      background: #FFFFFF;
+      box-shadow: #000000 1px 1px 5px;
+      position: fixed;
+      top: 0px;
+      width: 100%; }
+      @media screen and (min-device-width: 960px) and (min-width: 960px) {
+        body .page .main .menu--fixed {
+          box-shadow: none;
+          top: 50px;
+          width: calc(960px - 768px); } }
+    body .page .main .menu nav {
+      display: flex;
+      flex-direction: row; }
+      @media screen and (min-device-width: 960px) and (min-width: 960px) {
+        body .page .main .menu nav {
+          flex-direction: column; } }
+      body .page .main .menu nav a {
+        border-left: 2px solid #FFFFFF;
+        color: lightgray;
+        font-size: 20px;
+        padding: 10px 10px;
+        text-decoration: none; }
+        @media screen and (min-device-width: 960px) and (min-width: 960px) {
+          body .page .main .menu nav a {
+            margin: 0 0 20px 0;
+            padding: 0 10px; } }
+        body .page .main .menu nav a:hover {
+          color: #000000;
+          border-left: 2px solid #000000; }
+  body .page footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    body .page footer img {
+      flex: 1; }
+    body .page footer aside {
+      display: flex;
+      justify-content: center;
+      flex: 5; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "pearson-quarks.css",
+	"sources": [
+		"../../../app/assets/styles/pearson-quarks.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAC,sEAAI"
+}
