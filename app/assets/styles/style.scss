@@ -4,13 +4,19 @@ $page-size: 960px;
 
 body {
   align-items: center;
-  background: $pearson-quarks--white;
+  background: $pc-color-white;
   display: flex;
   font-family: $pearson-quarks--font-family;
   font-size: $pearson-quarks--font-size;
   justify-content: center;
   margin: 0;
   padding: 0;
+  h1{
+    @include pearson-quarks--h1-font();
+  }
+  h2{
+    @include pearson-quarks--h2-font();
+  }
   .page {
     @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
       width: $page-size;
@@ -46,8 +52,8 @@ body {
           width: calc(#{$page-size} - #{$page-size*0.8});
         }
         &--fixed {
-          background: $pearson-quarks--white;
-          box-shadow: $pearson-quarks--black 1px 1px 5px;
+          background: $pc-color-white;
+          box-shadow: $pc-color-black 1px 1px 5px;
           position: fixed;
           top: 0px;
           width: 100%;
@@ -64,8 +70,8 @@ body {
             flex-direction: column;
           }
           a {
-            border-left: 2px solid $pearson-quarks--white;
-            color: $pearson-quarls--light_gray;
+            border-left: 2px solid $pc-color-white;
+            color: $pc-color-gray-cool;
             @include pearson-quarks--h2-font();
             @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
               margin: 0 0 20px 0;
@@ -74,8 +80,8 @@ body {
             padding: 10px 10px;
             text-decoration: none;
             &:hover {
-              color: $pearson-quarks--black;
-              border-left: 2px solid $pearson-quarks--black;
+              color: $pc-color-black;
+              border-left: 2px solid $pc-color-black;
             }
           }
         }
@@ -85,7 +91,7 @@ body {
       display: flex;
       flex-direction: row;
       align-items: center;
-      img {
+      span {
         flex: 1;
       }
       aside {

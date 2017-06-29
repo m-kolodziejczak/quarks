@@ -51,7 +51,6 @@ module.exports = (grunt) => {
       },
       dist: {
         files: {
-          'dist/assets/styles/pearson-quarks.css': 'app/assets/styles/pearson-quarks.scss',
           'dist/assets/styles/style.css': 'app/assets/styles/style.scss'
         }
       }

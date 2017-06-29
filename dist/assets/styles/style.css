@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext");
 body {
   align-items: center;
-  background: #FFFFFF;
+  background: #fff;
   display: flex;
   font-family: "Roboto";
   font-size: 10px;
   justify-content: center;
   margin: 0;
   padding: 0; }
+  body h1 {
+    font-size: 30px; }
+  body h2 {
+    font-size: 20px; }
   @media screen and (min-device-width: 960px) and (min-width: 960px) {
     body .page {
       width: 960px; } }
@@ -37,8 +41,8 @@ body {
       body .page .main .menu {
         width: calc(960px - 768px); } }
     body .page .main .menu--fixed {
-      background: #FFFFFF;
-      box-shadow: #000000 1px 1px 5px;
+      background: #fff;
+      box-shadow: #000 1px 1px 5px;
       position: fixed;
       top: 0px;
       width: 100%; }
@@ -54,8 +58,8 @@ body {
         body .page .main .menu nav {
           flex-direction: column; } }
       body .page .main .menu nav a {
-        border-left: 2px solid #FFFFFF;
-        color: lightgray;
+        border-left: 2px solid #fff;
+        color: #d3d3d3;
         font-size: 20px;
         padding: 10px 10px;
         text-decoration: none; }
@@ -64,13 +68,13 @@ body {
             margin: 0 0 20px 0;
             padding: 0 10px; } }
         body .page .main .menu nav a:hover {
-          color: #000000;
-          border-left: 2px solid #000000; }
+          color: #000;
+          border-left: 2px solid #000; }
   body .page footer {
     display: flex;
     flex-direction: row;
     align-items: center; }
-    body .page footer img {
+    body .page footer span {
       flex: 1; }
     body .page footer aside {
       display: flex;
