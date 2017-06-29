@@ -1,0 +1,104 @@
+@import "pearson-quarks";
+
+$page-size: 960px;
+
+body {
+  align-items: center;
+  background: $pc-color-white;
+  display: flex;
+  font-family: $pearson-quarks--font-family;
+  font-size: $pearson-quarks--font-size;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  h1{
+    @include pearson-quarks--h1-font();
+  }
+  h2{
+    @include pearson-quarks--h2-font();
+  }
+  .page {
+    @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+      width: $page-size;
+    }
+    header {
+      @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+        margin: 50px 0 100px 0;
+      }
+      margin: 10px 0;
+      width: 100%;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+        flex-direction: row;
+      }
+      .content {
+        @include pearson-quarks--h2-font();
+        margin: 0 10px;
+        @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+          width: calc(#{$page-size*0.8} - 20px);
+          &--fixed {
+            margin: 0 10px 0 calc(#{$page-size} - #{$page-size*0.8} + 10px);
+          }
+        }
+        article {
+          margin: 0 0 100px 0;
+        }
+      }
+      .menu {
+        @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+          width: calc(#{$page-size} - #{$page-size*0.8});
+        }
+        &--fixed {
+          background: $pc-color-white;
+          box-shadow: $pc-color-black 1px 1px 5px;
+          position: fixed;
+          top: 0px;
+          width: 100%;
+          @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+            box-shadow: none;
+            top: 50px;
+            width: calc(#{$page-size} - #{$page-size*0.8});
+          }
+        }
+        nav {
+          display: flex;
+          flex-direction: row;
+          @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+            flex-direction: column;
+          }
+          a {
+            border-left: 2px solid $pc-color-white;
+            color: $pc-color-gray-cool;
+            @include pearson-quarks--h2-font();
+            @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+              margin: 0 0 20px 0;
+              padding: 0 10px;
+            }
+            padding: 10px 10px;
+            text-decoration: none;
+            &:hover {
+              color: $pc-color-black;
+              border-left: 2px solid $pc-color-black;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        flex: 1;
+      }
+      aside {
+        display: flex;
+        justify-content: center;
+        flex: 5;
+      }
+    }
+  }
+}
