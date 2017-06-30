@@ -1,17 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext');
 @import "../scss/_colorPalette";
 
 $pearson-quarks--font-size: 10px;
-$pearson-quarks--font-family: 'Roboto';
+$pearson-quarks--font-family: 'Open Sans';
+$pearson-quarks__titles--font-family: 'Playfair Display';
 
 @mixin pearson-quarks--h1-font(){
-  font-size: $pearson-quarks--font-size * 3;
+  color: $pc-color-blue-pearson;
+  font-family: $pearson-quarks__titles--font-family;
+  font-size: $pearson-quarks--font-size * 3.8;
+  font-weight: normal;
 }
 
 @mixin pearson-quarks--h2-font(){
-  font-size: $pearson-quarks--font-size * 2;
+  font-family: $pearson-quarks--font-family;
+  font-size: $pearson-quarks--font-size * 2.1;
 }
 
 @mixin pearson-quarks--standard-font(){
-  font-size: $pearson-quarks--font-size * 1.5;
+  font-family: $pearson-quarks--font-family;
+  font-size: $pearson-quarks--font-size * 2.1;
+}
+
+@mixin pearson-quarks--footer-font(){
+  color: $pc-color-white;
+  font-family: $pearson-quarks--font-family;
+  font-size: $pearson-quarks--font-size * 1.2;
 }

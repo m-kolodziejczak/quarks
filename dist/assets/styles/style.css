@@ -1,26 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext");
 body {
+  font-family: "Open Sans";
+  font-size: 21px;
   align-items: center;
   background: #fff;
   display: flex;
-  font-family: "Roboto";
-  font-size: 10px;
   justify-content: center;
   margin: 0;
   padding: 0; }
   body h1 {
-    font-size: 30px; }
+    color: #007fa3;
+    font-family: "Playfair Display";
+    font-size: 38px;
+    font-weight: normal; }
   body h2 {
-    font-size: 20px; }
+    font-family: "Open Sans";
+    font-size: 21px; }
   @media screen and (min-device-width: 960px) and (min-width: 960px) {
     body .page {
       width: 960px; } }
   body .page header {
-    margin: 10px 0;
+    align-items: center;
+    display: flex;
+    height: 84px;
+    padding: 0 47px;
     width: 100%; }
-    @media screen and (min-device-width: 960px) and (min-width: 960px) {
-      body .page header {
-        margin: 50px 0 100px 0; } }
+  body .page .product-name {
+    align-items: center;
+    background: #f5f5f5;
+    display: flex;
+    height: 47px;
+    margin: 0 0 77px 0;
+    padding: 0 47px; }
   body .page .main {
     display: flex;
     flex-direction: column; }
@@ -28,7 +40,8 @@ body {
       body .page .main {
         flex-direction: row; } }
     body .page .main .content {
-      font-size: 20px;
+      font-family: "Open Sans";
+      font-size: 21px;
       margin: 0 10px; }
       @media screen and (min-device-width: 960px) and (min-width: 960px) {
         body .page .main .content {
@@ -37,6 +50,9 @@ body {
             margin: 0 10px 0 calc(960px - 768px + 10px); } }
       body .page .main .content article {
         margin: 0 0 100px 0; }
+        body .page .main .content article .avatar {
+          display: flex;
+          justify-content: center; }
     @media screen and (min-device-width: 960px) and (min-width: 960px) {
       body .page .main .menu {
         width: calc(960px - 768px); } }
@@ -59,26 +75,28 @@ body {
           flex-direction: column; } }
       body .page .main .menu nav a {
         border-left: 2px solid #fff;
-        color: #d3d3d3;
-        font-size: 20px;
-        padding: 10px 10px;
+        color: #74797b;
+        font-family: "Open Sans";
+        font-size: 21px;
+        padding: 0 0 0 47px;
         text-decoration: none; }
         @media screen and (min-device-width: 960px) and (min-width: 960px) {
           body .page .main .menu nav a {
-            margin: 0 0 20px 0;
-            padding: 0 10px; } }
+            margin: 0 0 20px 0; } }
         body .page .main .menu nav a:hover {
-          color: #000;
-          border-left: 2px solid #000; }
+          color: #007fa3;
+          border-left: 2px solid #007fa3; }
+        body .page .main .menu nav a:active {
+          color: #007fa3; }
   body .page footer {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 12px;
+    align-items: center;
+    background: #636769;
     display: flex;
-    flex-direction: row;
-    align-items: center; }
-    body .page footer span {
-      flex: 1; }
-    body .page footer aside {
-      display: flex;
-      justify-content: center;
-      flex: 5; }
+    height: 100px;
+    justify-content: center;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
