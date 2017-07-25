@@ -1,0 +1,123 @@
+{
+  "palettes": {
+    "brand" : {
+      "name": "Brand Colors",
+      "colors": {
+        "white" : {
+          "hex": "#FFFFFF",
+          "name" : "white"
+        },
+        "black" : {
+          "hex": "#000000",
+          "name" : "black"
+        },
+        "blue-pearson" : {
+          "hex": "#007fa3",
+          "name" : "Pearson Blue"
+        }
+      }
+    },
+    "primary" : {
+      "name": "Primary Colors",
+      "colors": {
+        "blue-midnight": {
+          "hex": "#003057",
+          "name": "Midnight Blue"
+        },
+        "blue-ice": {
+          "hex": "#d4eae4",
+          "name": "Ice Blue"
+        },
+        "blue-ink": {
+          "hex": "#005a70",
+          "name": "Ink Blue"
+        },
+        "turquoise-marine": {
+          "hex": "#12b2a6",
+          "name": "Marine Turquoise"
+        },
+        "green-lime": {
+          "hex": "#d2db0e",
+          "name": "Lime Green"
+        },
+        "green-grass": {
+          "hex": "#008638",
+          "name": "Grass Green"
+        },
+        "green-fresh": {
+          "hex": "#84bd00",
+          "name": "Fresh Green"
+        },
+        "purple-royal": {
+          "hex": "#9e007e",
+          "name": "Royal Purple"
+        }, 
+        "pink-hot": {
+          "hex": "#ea067e",
+          "name": "Hot Pink"
+        }, 
+        "red-strawberry": {
+          "hex": "#db0020",
+          "name": "Strawberry Red"
+        }, 
+        "orange-juicy": {
+          "hex": "#ea7600",
+          "name": "Juicy Orange"
+        }, 
+        "yellow-sunshine": {
+          "hex": "#ffb81c",
+          "name": "Sunshine Yellow"
+        }, 
+        "gray-graphite": {
+          "hex": "#505759",
+          "name": "Grpahite Gray"
+        } 
+      }
+    }, 
+    "digital": {
+      "name" : "Digital Colors",
+      "colors": {
+        "blue-digital": {
+          "hex": "#047a9c",
+          "name": "Digital Blue"
+        },
+        "green-tealish": {
+          "hex": "#22bcb4",
+          "name": "Tealish Green"
+        },
+        "green-tealish-shade": {
+          "hex": "#bce9e8",
+          "name": "Tealish Green Shade"
+        },
+        "white-cool": {
+          "hex": "#f5f5f5",
+          "name": "Cool White"
+        },
+        "white-warm": {
+          "hex": "#ececec",
+          "name": "Warm White"
+        },
+        "gray-cool": {
+          "hex": "#d3d3d3",
+          "name": "Cool Gray"
+        },
+        "gray-pencil": {
+          "hex": "#74797b",
+          "name": "Pencil Gray"
+        },
+        "gray-pencil-hb": {
+          "hex": "#636769",
+          "name": "Pencil HB"
+        },
+        "gray-charcoal": {
+          "hex": "#393c3d",
+          "name": "Charcoal Gray"
+        },
+        "black-soft": {
+          "hex": "#252525",
+          "name": "Soft Black"
+        }
+      }
+    }
+  }
+}

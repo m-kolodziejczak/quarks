@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <title>Pearson Quarks</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script type="text/javascript" src="./quarks-visualisation.js"></script>
     <%= livereload %>
 </head>
 <body onload="init()">
 <div class="page">
     <header>
-        <img src="assets/images/pearson-logo-horizontal.png" alt="Pearson logo">
-    </header>
-    <div class="product-name">
-        <img src="assets/images/pearson-quarks-name.png" alt="Pearson Quarks logo">
-    </div>
-    <div class="main">
+        <img src="assets/images/logos/PearsonLogo_Horizontal_Blk_RGB.svg" alt="Pearson logo">
         <div class="menu">
             <nav>
                 <a href="#logo">
@@ -28,62 +24,484 @@
                 </a>
             </nav>
         </div>
+    </header>
+    <div class="main">
+        <!---->
         <div class="content">
             <article id="welcome">
                 <div class="avatar">
-                    <img src="assets/images/logo_quark_v1.png" alt="Pearson Quarks avatar">
+                    <canvas id="canvasOne" width="280" height="280" ></canvas>
                 </div>
-                <h1>Welcome to the Pearson Quarks</h1>
 
-                <h2>Basic Pearson brand assets in one place</h2>
-                Get all brand resources you need on start of digital products development and save your time for
-                searching and writing simple code.
+                <div class="claim">
+                    <h1>Pearson Quarks</h1>
+                    <h2>Pearson brand assets for software development</h2>
+                </div>
 
-                <h2>Technology Independent</h2>
-                Use with web and native apps. Color palettes and mixins are available in LESS, SASS, Stylus, and XML.
-                Quarks don’t depend on any libraries or frameworks.
-
-                <h2>Use it now</h2>
-                Get visuals assets from CDN or download them and host by yourself. Don’t waste your time for graphics
-                and font format conversion
+                <div class="benefits">
+                    <section>
+                        <h2>Quick project bootsraping</h2>
+                        <p>
+                            Get all brand resources you need on start of digital products development and save your time for searching and writing simple code.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Technology Independent</h2>
+                        <p>
+                            Use with web and native apps. Color palettes and mixins are available in LESS, SASS, Stylus, and XML. Quarks don’t depend on any libraries or frameworks.    
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Simple & flexible</h2>
+                        <p>
+                            Get visuals assets from CDN or download them and host by yourself. Don’t waste your time for graphics and font format conversion.   
+                        </p>
+                    </section>
+                </div>
             </article>
-            <article>
+            <article class="gray-bg logo-section">
                 <h1 id="logo">Logo</h1>
-                The primary version of our logo should be used wherever possible. Where the primary version is not
+                <p>The primary version of our logo should be used wherever possible. Where the primary version is not
                 appropriate, e.g, in digital environments or where there is restrictive space, we also have a horizontal
-                version.
+                version.</p>
+
+                <h2>Primary Logo</h2>
+
+                <div class="griddy">
+                    <section>
+                        <div class="logo-container">
+                        <img src="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg" alt="Logo Horizontal Mono White">
+                            </div>
+                        <div class="card-content">
+                        <h3>Primary Black</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    
+                    </section>
+                    <section>
+                        <div class="logo-container">
+                        <img src="assets/images/logos/PearsonLogo_Primary_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono White">
+                            </div>
+                        <div class="card-content">   
+                        <h3>Primary Mono Black</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="logo-container dark">
+                        <img src="assets/images/logos/PearsonLogo_Primary_W_RGB.svg" alt="Logo Horizontal Mono White">
+                            </div>
+                        <div class="card-content">    
+                            <h3>Primary White</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="logo-container dark">
+                        <img src="assets/images/logos/PearsonLogo_Primary_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
+                            </div>
+                        <div class="card-content">   
+                        <h3>Primary Mono White</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                </div>
+
+                <h2>Horizontal Logo</h2>
+
+                <div class="griddy">
+                    <section>
+                        <div class="logo-container">
+                        <img src="assets/images/logos/PearsonLogo_Horizontal_Blk_RGB.svg" alt="Logo Horizontal">
+                        </div>
+                        <div class="card-content">
+                        <h3>Horizontal Black</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                   
+                    <section>
+                        <div class="logo-container">
+                        <img src="assets/images/logos/PearsonLogo_Horizontal_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono">
+                            </div>
+                        <div class="card-content">
+                        <h3>Horizontal Black Mono</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="logo-container dark">
+                        <img src="assets/images/logos/PearsonLogo_Horizontal_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
+                            </div>
+                        <div class="card-content">
+                        <h3>Horizontal White Mono</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="logo-container dark">
+                        <img src="assets/images/logos/PearsonLogo_Horizontal_W_RGB.svg" alt="Logo Horizontal White">
+                        </div>
+                        <div class="card-content">
+                        <h3>Horizontal White</h3>
+                        </div>
+                        <div class="card-actions">
+                            <a href="assets/images/logos/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                            <a href="#logo">PNG</a>
+                        </div>
+                    </section>
+               
+                </div>
             </article>
-            <article>
+            <article class="color-section">
                 <h1 id="color">Color</h1>
+                <p>
                 Color brings a design to life. Color is versatile; it's used to express emotion and tone, as well as
                 place emphasis and create associations. Color should always be used in meaningful and intentional ways
-                in order to create patterns and visual cues.
+                in order to create patterns and visual cues.</p>
+
+                <section>
+                    <h2>Brand Colors</h2>
+
+                    <ul class="color-list griddy">
+                    <li>
+                        <div class="color-marker color-white">
+
+                        </div>
+                        <h3>white</h3>
+                        <ul>
+                            <li>#FFFFFF</li>
+                            <li>$pc-color-white</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-black">
+
+                        </div>
+                        <h3>black</h3>
+                        <ul>
+                            <li>#000000</li>
+                            <li>$pc-color-black</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-blue-pearson">
+
+                        </div>
+                        <h3>Pearson Blue</h3>
+                        <ul>
+                            <li>#007fa3</li>
+                            <li>$pc-color-blue-pearson</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Primary Colors</h2>
+
+                    <ul class="color-list griddy">
+                    <li>
+                        <div class="color-marker color-blue-midnight">
+
+                        </div>
+                        <h3>Midnight Blue</h3>
+                        <ul>
+                            <li>#003057</li>
+                            <li>$pc-color-blue-midnight</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-blue-ice">
+
+                        </div>
+                        <h3>Ice Blue</h3>
+                        <ul>
+                            <li>#d4eae4</li>
+                            <li>$pc-color-blue-ice</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-blue-ink">
+
+                        </div>
+                        <h3>Ink Blue</h3>
+                        <ul>
+                            <li>#005a70</li>
+                            <li>$pc-color-blue-ink</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-turquoise-marine">
+
+                        </div>
+                        <h3>Marine Turquoise</h3>
+                        <ul>
+                            <li>#12b2a6</li>
+                            <li>$pc-color-turquoise-marine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-green-lime">
+
+                        </div>
+                        <h3>Lime Green</h3>
+                        <ul>
+                            <li>#d2db0e</li>
+                            <li>$pc-color-green-lime</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-green-grass">
+
+                        </div>
+                        <h3>Grass Green</h3>
+                        <ul>
+                            <li>#008638</li>
+                            <li>$pc-color-green-grass</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-green-fresh">
+
+                        </div>
+                        <h3>Fresh Green</h3>
+                        <ul>
+                            <li>#84bd00</li>
+                            <li>$pc-color-green-fresh</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-purple-royal">
+
+                        </div>
+                        <h3>Royal Purple</h3>
+                        <ul>
+                            <li>#9e007e</li>
+                            <li>$pc-color-purple-royal</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-pink-hot">
+
+                        </div>
+                        <h3>Hot Pink</h3>
+                        <ul>
+                            <li>#ea067e</li>
+                            <li>$pc-color-pink-hot</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-red-strawberry">
+
+                        </div>
+                        <h3>Strawberry Red</h3>
+                        <ul>
+                            <li>#db0020</li>
+                            <li>$pc-color-red-strawberry</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-orange-juicy">
+
+                        </div>
+                        <h3>Juicy Orange</h3>
+                        <ul>
+                            <li>#ea7600</li>
+                            <li>$pc-color-orange-juicy</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-yellow-sunshine">
+
+                        </div>
+                        <h3>Sunshine Yellow</h3>
+                        <ul>
+                            <li>#ffb81c</li>
+                            <li>$pc-color-yellow-sunshine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-gray-graphite">
+
+                        </div>
+                        <h3>Grpahite Gray</h3>
+                        <ul>
+                            <li>#505759</li>
+                            <li>$pc-color-gray-graphite</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Digital Colors</h2>
+
+                    <ul class="color-list griddy">
+                    <li>
+                        <div class="color-marker color-blue-digital">
+
+                        </div>
+                        <h3>Digital Blue</h3>
+                        <ul>
+                            <li>#047a9c</li>
+                            <li>$pc-color-blue-digital</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-green-tealish">
+
+                        </div>
+                        <h3>Tealish Green</h3>
+                        <ul>
+                            <li>#22bcb4</li>
+                            <li>$pc-color-green-tealish</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-green-tealish-shade">
+
+                        </div>
+                        <h3>Tealish Green Shade</h3>
+                        <ul>
+                            <li>#bce9e8</li>
+                            <li>$pc-color-green-tealish-shade</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-white-cool">
+
+                        </div>
+                        <h3>Cool White</h3>
+                        <ul>
+                            <li>#f5f5f5</li>
+                            <li>$pc-color-white-cool</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-white-warm">
+
+                        </div>
+                        <h3>Warm White</h3>
+                        <ul>
+                            <li>#ececec</li>
+                            <li>$pc-color-white-warm</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-gray-cool">
+
+                        </div>
+                        <h3>Cool Gray</h3>
+                        <ul>
+                            <li>#d3d3d3</li>
+                            <li>$pc-color-gray-cool</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-gray-pencil">
+
+                        </div>
+                        <h3>Pencil Gray</h3>
+                        <ul>
+                            <li>#74797b</li>
+                            <li>$pc-color-gray-pencil</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-gray-pencil-hb">
+
+                        </div>
+                        <h3>Pencil HB</h3>
+                        <ul>
+                            <li>#636769</li>
+                            <li>$pc-color-gray-pencil-hb</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-gray-charcoal">
+
+                        </div>
+                        <h3>Charcoal Gray</h3>
+                        <ul>
+                            <li>#393c3d</li>
+                            <li>$pc-color-gray-charcoal</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="color-marker color-black-soft">
+
+                        </div>
+                        <h3>Soft Black</h3>
+                        <ul>
+                            <li>#252525</li>
+                            <li>$pc-color-black-soft</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </section>
             </article>
-            <article id="typography">
+            <article id="typography" class="typo-section">
                 <h1 id="typography">Typography</h1>
+                <p>
                 Our brand typefaces are Playfair Display and Open Sans. Using both serif and sans serif typefaces gives
-                us the flexibility to cover our wide range of audiences and communications.
+                us the flexibility to cover our wide range of audiences and communications.</p>
+                <section class="font-box">
+                    <div class="playfair-typo-demo">
+                        Playfair display
+                    </div>
+
+                    <p>
+                    Use for headings in marketing material and simple webistes
+                    </p>
+
+                    <p>
+                        $pc__titles--font-family
+                    </p>
+                </section>
+
+                <section class="font-box">
+                    <div class="open-sans-typo-demo">
+                        Open Sans
+                    </div>
+
+                    <p>
+                    Use for for body and and headings in apps
+                    </p>
+
+                    <p>
+                        $pc--font-family
+                    </p>
+                </section>
             </article>
         </div>
     </div>
-    <footer>
-        This website uses cookies. Continuing to use this website gives consent to cookies being used.<br>For more information, please see our cookie policy.<br>© 2017 Pearson
-    </footer>
 </div>
 </body>
 <script>
   function init() {
-    window.addEventListener('scroll', function (ev) {
-      var scrollLimitValue = window.screen.availWidth < 960 ? 50 : 150;
-      if (window.scrollY >= scrollLimitValue && !document.getElementsByClassName('menu')[0].classList.contains('menu--fixed')) {
-        document.getElementsByClassName('menu')[0].classList.add('menu--fixed');
-        document.getElementsByClassName('content')[0].classList.add('content--fixed');
-      } else if (window.scrollY < scrollLimitValue && document.getElementsByClassName('menu')[0].classList.contains('menu--fixed')) {
-        document.getElementsByClassName('menu')[0].classList.remove('menu--fixed');
-        document.getElementsByClassName('content')[0].classList.remove('content--fixed');
-      }
 
-    });
+    canvasApp();
+
   }
 </script>
 </html>
