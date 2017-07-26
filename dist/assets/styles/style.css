@@ -32,10 +32,10 @@ ol, ul {
   list-style: none; }
 
 .color-white {
-  background: #FFFFFF; }
+  background: #fff; }
 
 .color-black {
-  background: #000000; }
+  background: #000; }
 
 .color-blue-pearson {
   background: #007fa3; }
@@ -114,7 +114,7 @@ body {
   font-family: "Open Sans";
   font-size: 18px;
   align-items: center;
-  background: #FFFFFF;
+  background: #fff;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -161,7 +161,7 @@ body {
       display: flex;
       flex-direction: row; }
       body .menu nav a {
-        border-left: 2px solid #FFFFFF;
+        border-left: 2px solid #fff;
         padding: 0 0 0 47px; }
   body .claim {
     text-align: center; }
@@ -254,7 +254,7 @@ body {
         box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
         background-color: white; }
   body .page footer {
-    color: #FFFFFF;
+    color: #fff;
     font-family: "Open Sans";
     font-size: 12px;
     align-items: center;

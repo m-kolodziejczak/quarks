@@ -9,7 +9,16 @@ module.exports = (grunt) => {
     pkg: grunt.file.readJSON('package.json'),
     writefile: {
       options: {
-        data: pc_colors
+        data: pc_colors,
+        helpers: {
+            toHex: function (hexColor) {
+              if (hexColor.length === 4 ) {
+                hexColor =  '#' + hexColor.substr(1).repeat(2);
+              }
+
+              return hexColor.toUpperCase();
+            }
+        }
       },
       sass : {
         src: 'app/templates/_colorPalette.scss.hbs',

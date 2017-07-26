@@ -4,11 +4,11 @@
       "name": "Brand Colors",
       "colors": {
         "white" : {
-          "hex": "#FFFFFF",
+          "hex": "#fff",
           "name" : "white"
         },
         "black" : {
-          "hex": "#000000",
+          "hex": "#000",
           "name" : "black"
         },
         "blue-pearson" : {
