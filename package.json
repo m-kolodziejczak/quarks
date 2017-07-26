@@ -25,6 +25,7 @@
     "grunt-express-server": "^0.5.3",
     "grunt-sass": "^2.0.0",
     "grunt-template": "^1.0.0",
+    "grunt-writefile": "^0.1.4",
     "load-grunt-tasks": "^3.5.2"
   }
 }

@@ -1,13 +1,14 @@
+@import "reset";
 @import "pearson-quarks";
+@import "colors4docs";
 
 $page-size: 960px;
 
 body {
+  @include pearson-quarks--standard-font();
   align-items: center;
   background: $pc-color-white;
   display: flex;
-  font-family: $pearson-quarks--font-family;
-  font-size: $pearson-quarks--font-size;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -17,41 +18,27 @@ body {
   h2{
     @include pearson-quarks--h2-font();
   }
-  .page {
-    @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-      width: $page-size;
+  p{
+    margin-top: 1em;
+    @include pearson-quarks--standard-font();
+  }
+  a{
+    color: $pc-color-gray-pencil;
+    text-decoration: none;
+    &:hover {
+      color: $pc-color-blue-pearson;
+      cursor:pointer;
+      //border-left: 2px solid $pc-color-blue-pearson;
     }
-    header {
-      @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-        margin: 50px 0 100px 0;
-      }
-      margin: 10px 0;
-      width: 100%;
+    &:active {
+      color: $pc-color-blue-pearson;
     }
-    .main {
-      display: flex;
-      flex-direction: column;
-      @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-        flex-direction: row;
-      }
-      .content {
-        @include pearson-quarks--h2-font();
-        margin: 0 10px;
-        @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-          width: calc(#{$page-size*0.8} - 20px);
-          &--fixed {
-            margin: 0 10px 0 calc(#{$page-size} - #{$page-size*0.8} + 10px);
-          }
-        }
-        article {
-          margin: 0 0 100px 0;
-        }
-      }
-      .menu {
-        @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+  }
+  .menu {
+        /*@media screen and (min-device-width: $page-size) and (min-width: $page-size) {
           width: calc(#{$page-size} - #{$page-size*0.8});
-        }
-        &--fixed {
+        }*/
+        /*&--fixed {
           background: $pc-color-white;
           box-shadow: $pc-color-black 1px 1px 5px;
           position: fixed;
@@ -62,43 +49,176 @@ body {
             top: 50px;
             width: calc(#{$page-size} - #{$page-size*0.8});
           }
-        }
+        }*/
         nav {
           display: flex;
           flex-direction: row;
           @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-            flex-direction: column;
+            //flex-direction: column;
           }
           a {
             border-left: 2px solid $pc-color-white;
-            color: $pc-color-gray-cool;
-            @include pearson-quarks--h2-font();
-            @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-              margin: 0 0 20px 0;
-              padding: 0 10px;
-            }
-            padding: 10px 10px;
-            text-decoration: none;
-            &:hover {
-              color: $pc-color-black;
-              border-left: 2px solid $pc-color-black;
-            }
+            padding: 0 0 0 47px;
           }
         }
       }
+  .claim{
+    text-align: center;
+    h1{
+      padding: 0;
+      margin:0.5em;
+    }
+  }
+  .benefits{
+    margin-top:2em;
+
+    display: flex;
+    flex-direction: row;
+    //align-items: center;
+    justify-content: space-between;
+
+    section {
+      width: 30%;
+    }
+  }
+  .page {
+    @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
+      width: $page-size;
+    }
+    header {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      display: flex;
+      height: 84px;
+      //padding: 0 47px;
+      width: 100%;
+    }
+    .product-name{
+      align-items: center;
+      background: $pc-color-white-cool;
+      display: flex;
+      height: 47px;
+      margin: 0 0 77px 0;
+      padding: 0 47px;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+
+      .content {
+        @include pearson-quarks--standard-font();
+        margin: 0 10px;
+
+        article {
+          margin: 0 0 100px 0;
+          .avatar{
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+
+      .logo-section, .color-section{
+        h2{
+          margin: 2em 0;
+        }
+      }
+
+      .logo-section{
+        .card-content{
+          padding:2em;
+          text-align: center;
+        }
+
+        .card-actions{
+          border-top: 1px solid $pc-color-gray-cool;
+          padding: 2em;
+          display: flex;
+          flex-direction:row;
+          justify-content: space-around;
+        }
+
+        .logo-container{
+            display: flex;
+            padding: 2em;
+            justify-content: center;
+            &.dark{
+              background: $pc-color-gray-pencil-hb;
+            }
+          }
+          img{
+            max-height: 72px;
+          }
+      }
+
+      .color-section{
+
+        h3{
+          margin: 2em 0;
+        }
+
+        .color-list.griddy{
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .color-marker{
+          width:100px;
+          height:100px;
+          border-radius: 50px;
+        }
+
+        .color-marker.color-white{
+          border: 1px solid $pc-color-gray-pencil-hb;
+        }
+
+      }
+
+      .typo-section{
+        .font-box{
+          margin-top: 2em;
+        }
+
+        .playfair-typo-demo{
+          font-family: $pc-font-playfair;
+          font-size: 4em;
+          color: $pc-color-blue-pearson;
+        }
+
+        .open-sans-typo-demo{
+          font-family: $pc-font-open-sans;
+          font-size: 4em;
+          color: $pc-color-blue-pearson;
+        }
+      }
+
+      .griddy{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+        margin-top:1em;
+
+        section{
+          //padding:2em;
+          box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+          background-color: white;
+        }
+      }
+
+
+      .gray-bg{
+        //background-color: $pc-color-white-cool;
+      }
     }
     footer {
-      display: flex;
-      flex-direction: row;
+      @include pearson-quarks--footer-font();
       align-items: center;
-      span {
-        flex: 1;
-      }
-      aside {
-        display: flex;
-        justify-content: center;
-        flex: 5;
-      }
+      background: $pc-color-gray-pencil-hb;
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      text-align: center;
     }
   }
 }

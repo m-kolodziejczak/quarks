@@ -1,0 +1,7 @@
+{{#each palettes}}
+// {{this.name}}
+{{#each this.colors}}
+$pc-color-{{@key}}: {{this.hex}} !default;
+{{/each}}
+
+{{/each}}

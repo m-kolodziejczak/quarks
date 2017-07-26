@@ -5,7 +5,7 @@
     <title>Pearson Quarks</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <script type="text/javascript" src="./quarks-visualisation.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
+    <%= livereload %>
 </head>
 <body onload="init()">
 <div class="page">
@@ -181,284 +181,26 @@
                 place emphasis and create associations. Color should always be used in meaningful and intentional ways
                 in order to create patterns and visual cues.</p>
 
+                {{#each palettes}}
                 <section>
-                    <h2>Brand Colors</h2>
+                    <h2>{{this.name}}</h2>
 
                     <ul class="color-list griddy">
+                    {{#each colors}}
                     <li>
-                        <div class="color-marker color-white">
+                        <div class="color-marker color-{{@key}}">
 
                         </div>
-                        <h3>white</h3>
+                        <h3>{{this.name}}</h3>
                         <ul>
-                            <li>#FFFFFF</li>
-                            <li>$pc-color-white</li>
+                            <li>{{toHex this.hex}}</li>
+                            <li>$pc-color-{{@key}}</li>
                         </ul>
                     </li>
-                    <li>
-                        <div class="color-marker color-black">
-
-                        </div>
-                        <h3>black</h3>
-                        <ul>
-                            <li>#000000</li>
-                            <li>$pc-color-black</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-blue-pearson">
-
-                        </div>
-                        <h3>Pearson Blue</h3>
-                        <ul>
-                            <li>#007FA3</li>
-                            <li>$pc-color-blue-pearson</li>
-                        </ul>
-                    </li>
+                    {{/each}}
                     </ul>
                 </section>
-                <section>
-                    <h2>Primary Colors</h2>
-
-                    <ul class="color-list griddy">
-                    <li>
-                        <div class="color-marker color-blue-midnight">
-
-                        </div>
-                        <h3>Midnight Blue</h3>
-                        <ul>
-                            <li>#003057</li>
-                            <li>$pc-color-blue-midnight</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-blue-ice">
-
-                        </div>
-                        <h3>Ice Blue</h3>
-                        <ul>
-                            <li>#D4EAE4</li>
-                            <li>$pc-color-blue-ice</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-blue-ink">
-
-                        </div>
-                        <h3>Ink Blue</h3>
-                        <ul>
-                            <li>#005A70</li>
-                            <li>$pc-color-blue-ink</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-turquoise-marine">
-
-                        </div>
-                        <h3>Marine Turquoise</h3>
-                        <ul>
-                            <li>#12B2A6</li>
-                            <li>$pc-color-turquoise-marine</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-green-lime">
-
-                        </div>
-                        <h3>Lime Green</h3>
-                        <ul>
-                            <li>#D2DB0E</li>
-                            <li>$pc-color-green-lime</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-green-grass">
-
-                        </div>
-                        <h3>Grass Green</h3>
-                        <ul>
-                            <li>#008638</li>
-                            <li>$pc-color-green-grass</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-green-fresh">
-
-                        </div>
-                        <h3>Fresh Green</h3>
-                        <ul>
-                            <li>#84BD00</li>
-                            <li>$pc-color-green-fresh</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-purple-royal">
-
-                        </div>
-                        <h3>Royal Purple</h3>
-                        <ul>
-                            <li>#9E007E</li>
-                            <li>$pc-color-purple-royal</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-pink-hot">
-
-                        </div>
-                        <h3>Hot Pink</h3>
-                        <ul>
-                            <li>#EA067E</li>
-                            <li>$pc-color-pink-hot</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-red-strawberry">
-
-                        </div>
-                        <h3>Strawberry Red</h3>
-                        <ul>
-                            <li>#DB0020</li>
-                            <li>$pc-color-red-strawberry</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-orange-juicy">
-
-                        </div>
-                        <h3>Juicy Orange</h3>
-                        <ul>
-                            <li>#EA7600</li>
-                            <li>$pc-color-orange-juicy</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-yellow-sunshine">
-
-                        </div>
-                        <h3>Sunshine Yellow</h3>
-                        <ul>
-                            <li>#FFB81C</li>
-                            <li>$pc-color-yellow-sunshine</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-gray-graphite">
-
-                        </div>
-                        <h3>Grpahite Gray</h3>
-                        <ul>
-                            <li>#505759</li>
-                            <li>$pc-color-gray-graphite</li>
-                        </ul>
-                    </li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Digital Colors</h2>
-
-                    <ul class="color-list griddy">
-                    <li>
-                        <div class="color-marker color-blue-digital">
-
-                        </div>
-                        <h3>Digital Blue</h3>
-                        <ul>
-                            <li>#047A9C</li>
-                            <li>$pc-color-blue-digital</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-green-tealish">
-
-                        </div>
-                        <h3>Tealish Green</h3>
-                        <ul>
-                            <li>#22BCB4</li>
-                            <li>$pc-color-green-tealish</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-green-tealish-shade">
-
-                        </div>
-                        <h3>Tealish Green Shade</h3>
-                        <ul>
-                            <li>#BCE9E8</li>
-                            <li>$pc-color-green-tealish-shade</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-white-cool">
-
-                        </div>
-                        <h3>Cool White</h3>
-                        <ul>
-                            <li>#F5F5F5</li>
-                            <li>$pc-color-white-cool</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-white-warm">
-
-                        </div>
-                        <h3>Warm White</h3>
-                        <ul>
-                            <li>#ECECEC</li>
-                            <li>$pc-color-white-warm</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-gray-cool">
-
-                        </div>
-                        <h3>Cool Gray</h3>
-                        <ul>
-                            <li>#D3D3D3</li>
-                            <li>$pc-color-gray-cool</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-gray-pencil">
-
-                        </div>
-                        <h3>Pencil Gray</h3>
-                        <ul>
-                            <li>#74797B</li>
-                            <li>$pc-color-gray-pencil</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-gray-pencil-hb">
-
-                        </div>
-                        <h3>Pencil HB</h3>
-                        <ul>
-                            <li>#636769</li>
-                            <li>$pc-color-gray-pencil-hb</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-gray-charcoal">
-
-                        </div>
-                        <h3>Charcoal Gray</h3>
-                        <ul>
-                            <li>#393C3D</li>
-                            <li>$pc-color-gray-charcoal</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="color-marker color-black-soft">
-
-                        </div>
-                        <h3>Soft Black</h3>
-                        <ul>
-                            <li>#252525</li>
-                            <li>$pc-color-black-soft</li>
-                        </ul>
-                    </li>
-                    </ul>
-                </section>
+                {{/each}}
             </article>
             <article id="typography" class="typo-section">
                 <h1 id="typography">Typography</h1>
