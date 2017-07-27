@@ -36,32 +36,26 @@ module.exports = (grunt) => {
         src: 'app/templates/colors4docs.scss.hbs',
         dest: 'app/assets/styles/colors4docs.scss'
       },
-      documentation : {
+      documentationDev : {
+        options : {
+          data : {
+            livereload: '<script src="//localhost:35729/livereload.js"></script>',
+            colors: pc_colors
+          }
+        },
         src: 'app/index.html.hbs',
         dest: 'app/index.html'
       },
-    },
-    template: {
-      dev: {
-        options: {
-          data: {
-            livereload: '<script src="//localhost:35729/livereload.js"></script>'
+      documentationDist : {
+        options : {
+          data : {
+            livereload: '',
+            colors: pc_colors
           }
         },
-        files: {
-          'dist/index.html': 'app/index.html'
-        }
+        src: 'app/index.html.hbs',
+        dest: 'app/index.html'
       },
-      dist: {
-        options: {
-          data: {
-            livereload: ''
-          }
-        },
-        files: {
-          'dist/index.html': 'app/index.html'
-        }
-      }
     },
     copy: {
       dist: {
@@ -70,14 +64,14 @@ module.exports = (grunt) => {
           {expand: true, cwd: 'app', src: ['assets/less/*'], dest: 'dist'},
           {expand: true, cwd: 'app', src: ['assets/scss/*'], dest: 'dist'},
           {expand: true, cwd: 'app', src: ['assets/stylus/*'], dest: 'dist'},
-          {expand: true, cwd: 'app', src: ['*.js'], dest: 'dist'}
         ]
       },
       docs: {
         files: [
           {expand: true, cwd: 'dist', src: ['assets/images/logos/svg/**'], dest: 'docs'},
           {expand: true, cwd: 'dist', src: ['assets/styles/**'], dest: 'docs'},
-          {expand: true, cwd: 'dist', src: ['*.*'], dest: 'docs'}
+          {expand: true, cwd: 'app', src: ['*.html'], dest: 'docs'},
+          {expand: true, cwd: 'app', src: ['*.js'], dest: 'docs'},
         ]
       }
     },
@@ -100,9 +94,9 @@ module.exports = (grunt) => {
       options: {
         sourceMap: true
       },
-      dist: {
+      docs: {
         files: {
-          'dist/assets/styles/style.css': 'app/assets/styles/style.scss'
+          'docs/assets/styles/style.css': 'app/assets/styles/style.scss'
         }
       }
     },
@@ -122,11 +116,11 @@ module.exports = (grunt) => {
         options: {
           spawn: false
         },
-        tasks: ['template:dev', 'express:dist', 'writefile:documentation']
+        tasks: ['express:dist', 'writefile:documentationDev']
       }
     }
   });
 
-  grunt.registerTask('build', ['clean:dist', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs', 'writefile:documentation', 'sass:dist', 'template:dist', 'copy:dist', 'copy:docs']);
-  grunt.registerTask('default', ['build', 'template:dev', 'express:dist', 'watch']);
+  grunt.registerTask('build', ['clean:dist', 'clean:docs', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs', 'writefile:documentationDist', 'writefile:documentationDev', 'sass:docs', 'copy:dist', 'copy:docs']);
+  grunt.registerTask('default', ['build', 'writefile:documentationDev', 'express:dist', 'watch']);
 };
