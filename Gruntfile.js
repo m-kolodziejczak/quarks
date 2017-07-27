@@ -72,11 +72,21 @@ module.exports = (grunt) => {
           {expand: true, cwd: 'app', src: ['assets/stylus/*'], dest: 'dist'},
           {expand: true, cwd: 'app', src: ['*.js'], dest: 'dist'}
         ]
+      },
+      docs: {
+        files: [
+          {expand: true, cwd: 'dist', src: ['assets/images/logos/svg/**'], dest: 'docs'},
+          {expand: true, cwd: 'dist', src: ['assets/styles/**'], dest: 'docs'},
+          {expand: true, cwd: 'dist', src: ['*.*'], dest: 'docs'}
+        ]
       }
     },
     clean: {
       dist: {
         src: 'dist'
+      },
+      docs: {
+        src: 'docs'
       }
     },
     express: {
@@ -117,6 +127,6 @@ module.exports = (grunt) => {
     }
   });
 
-  grunt.registerTask('build', ['clean:dist', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs', 'writefile:documentation', 'sass:dist', 'template:dist', 'copy:dist']);
+  grunt.registerTask('build', ['clean:dist', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs', 'writefile:documentation', 'sass:dist', 'template:dist', 'copy:dist', 'copy:docs']);
   grunt.registerTask('default', ['build', 'template:dev', 'express:dist', 'watch']);
 };
