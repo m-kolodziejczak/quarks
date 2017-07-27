@@ -5,7 +5,7 @@
     <title>Pearson Quarks</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <script type="text/javascript" src="./quarks-visualisation.js"></script>
-    <%= livereload %>
+    {{{ livereload }}}
 </head>
 <body onload="init()">
 <div class="page">
@@ -181,7 +181,7 @@
                 place emphasis and create associations. Color should always be used in meaningful and intentional ways
                 in order to create patterns and visual cues.</p>
 
-                {{#each palettes}}
+                {{#each colors.palettes}}
                 <section>
                     <h2>{{this.name}}</h2>
 
