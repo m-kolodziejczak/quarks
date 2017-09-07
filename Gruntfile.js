@@ -69,9 +69,11 @@ module.exports = (grunt) => {
       docs: {
         files: [
           {expand: true, cwd: 'dist', src: ['assets/images/logos/svg/**'], dest: 'docs'},
+          {expand: true, cwd: 'dist', src: ['assets/images/*'], dest: 'docs'},
           {expand: true, cwd: 'dist', src: ['assets/styles/**'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.html'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.js'], dest: 'docs'},
+          {expand: true, cwd: 'app', src: ['*.svg'], dest: 'docs/assets/images'},
         ]
       }
     },
@@ -116,7 +118,7 @@ module.exports = (grunt) => {
         options: {
           spawn: false
         },
-        tasks: ['express:dist', 'writefile:documentationDev']
+        tasks: ['express:dist', 'build']
       }
     }
   });

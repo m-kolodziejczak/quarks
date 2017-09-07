@@ -40,6 +40,7 @@ function canvasApp() {
     var i;
     var theta, phi;
     var x0, y0, z0;
+    var doublePI;
         
     init();
     
@@ -47,6 +48,7 @@ function canvasApp() {
         wait = 1;
         count = wait - 1;
         numToAddEachFrame = 8;
+        doublePI = 2*Math.PI;
         
         //particle color
         r = 00;
@@ -87,7 +89,7 @@ function canvasApp() {
         //alpha values will lessen as particles move further back, causing depth-based darkening:
         zeroAlphaDepth = -750; 
         
-        turnSpeed = 2*Math.PI/1200; //the sphere will rotate at this speed (one complete rotation every 1600 frames).
+        turnSpeed = doublePI/1200; //the sphere will rotate at this speed (one complete rotation every 1600 frames).
         turnAngle = 0; //initial angle
         
         timer = setInterval(onTimer, 10/24);
@@ -100,7 +102,7 @@ function canvasApp() {
                         
             count = 0;
             for (i = 0; i < numToAddEachFrame; i++) {
-                theta = Math.random()*2*Math.PI;
+                theta = Math.random()*doublePI;
                 phi = Math.acos(Math.random()*2-1);
                 x0 = sphereRad*Math.sin(phi)*Math.cos(theta);
                 y0 = sphereRad*Math.sin(phi)*Math.sin(theta);
@@ -129,7 +131,7 @@ function canvasApp() {
         }
         
         //update viewing angle
-        turnAngle = (turnAngle + turnSpeed) % (2*Math.PI);
+        turnAngle = (turnAngle + turnSpeed) % (doublePI);
         sinAngle = Math.sin(turnAngle);
         cosAngle = Math.cos(turnAngle);
 
@@ -205,7 +207,7 @@ function canvasApp() {
                 
                 //draw
                 context.beginPath();
-                context.arc(p.projX, p.projY, m*particleRad, 0, 2*Math.PI, false);
+                context.arc(p.projX, p.projY, m*particleRad, 0, doublePI, false);
                 context.closePath();
                 context.fill();
             }
