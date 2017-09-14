@@ -12,8 +12,9 @@ module.exports = (grunt) => {
         data: pc_colors,
         helpers: {
             toHex: function (hexColor) {
-              if (hexColor.length === 4 ) {
-                hexColor =  '#' + hexColor.substr(1).repeat(2);
+              // #fc0 to #ffcc00
+              if (hexColor.length === 4) {
+                hexColor = hexColor.replace( /\#(\w)(\w)(\w)/, "#$1$1$2$2$3$3");
               }
 
               return hexColor.toUpperCase();
