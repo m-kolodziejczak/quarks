@@ -61,17 +61,17 @@ module.exports = (grunt) => {
     copy: {
       dist: {
         files: [
-          {expand: true, cwd: 'app', src: ['assets/images/**'], dest: 'dist'},
-          {expand: true, cwd: 'app', src: ['assets/less/*'], dest: 'dist'},
-          {expand: true, cwd: 'app', src: ['assets/scss/*'], dest: 'dist'},
-          {expand: true, cwd: 'app', src: ['assets/stylus/*'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['images/**'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['less/*'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['scss/*'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['stylus/*'], dest: 'dist'},
         ]
       },
       docs: {
         files: [
-          {expand: true, cwd: 'dist', src: ['assets/images/logos/svg/**'], dest: 'docs'},
-          {expand: true, cwd: 'dist', src: ['assets/images/*'], dest: 'docs'},
-          {expand: true, cwd: 'dist', src: ['assets/styles/**'], dest: 'docs'},
+          {expand: true, cwd: 'dist', src: ['images/logos/svg/**'], dest: 'docs/assets'},
+          {expand: true, cwd: 'dist', src: ['images/*'], dest: 'docs/assets'},
+          {expand: true, cwd: 'dist', src: ['styles/**'], dest: 'docs/assets'},
           {expand: true, cwd: 'app', src: ['*.html'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.js'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.svg'], dest: 'docs/assets/images'},

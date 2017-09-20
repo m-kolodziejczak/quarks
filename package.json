@@ -1,7 +1,8 @@
 {
   "name": "pearson-quarks",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Pearson Quarks",
+  "files" : ["dist/*"],
   "main": "index.js",
   "scripts": {
     "grunt": "grunt"
@@ -10,12 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/PearsonEnglish/quarks.git"
   },
-  "author": "",
+  "author": "artur.padol@pearson.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PearsonEnglish/quarks/issues"
   },
-  "homepage": "https://github.com/PearsonEnglish/quarks#readme",
+  "homepage": "https://pearsonenglish.github.io/quarks/",
   "devDependencies": {
     "express": "^4.15.3",
     "grunt": "^1.0.1",
