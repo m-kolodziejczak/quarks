@@ -1,4 +1,5 @@
-@import "../scss/_typography";
+@import "../scss/fonts/_fontVariables";
+@import "../scss/fonts/_fontsAllSelfHosted";
 @import "../scss/_colorPalette";
 
 $pc--font-size: 10px;
@@ -6,20 +7,28 @@ $pc--font-size: 10px;
 @mixin pearson-quarks--h1-font(){
   color: $pc-color-blue-midnight;
   font-family: $pc-font-playfair;
-  font-size: $pc--font-size * 3.8;
+  font-size: $pc--font-size * 4.8;
   font-weight: normal;
 }
 
 @mixin pearson-quarks--h2-font(){
   color: $pc-color-blue-pearson;	
   font-family: $pc-font-playfair;
-  font-size: $pc--font-size * 2.1;
+  font-size: $pc--font-size * 2.8;
 }
 
 @mixin pearson-quarks--standard-font(){
   color: $pc-color-black-soft;	
   font-family: $pc-font-open-sans;
   font-size: $pc--font-size * 1.8;
+  line-height: 1.4em;
+}
+
+@mixin pearson-quarks--asian-font(){
+  color: $pc-color-black-soft;  
+  font-family: $pc-font-chinese-simple;
+  font-size: $pc--font-size * 1.8;
+  //line-height: 1.4em;
 }
 
 @mixin pearson-quarks--footer-font(){

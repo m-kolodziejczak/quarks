@@ -194,12 +194,21 @@ body {
           font-family: $pc-font-playfair;
           font-size: 4em;
           color: $pc-color-blue-pearson;
+          padding: 0.5em 0;
         }
 
         .open-sans-typo-demo{
           font-family: $pc-font-open-sans;
+          font-size: 3em;
+          color: $pc-color-blue-pearson;
+          padding: 0.5em 0;
+        }
+
+        .han-sans-typo-demo{
+          font-family: $pc-font-chinese-simple;
           font-size: 4em;
           color: $pc-color-blue-pearson;
+          padding: 0.5em 0;
         }
       }
 

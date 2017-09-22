@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,6 +28,77 @@ body {
 
 ol, ul {
   list-style: none; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans/OpenSans-Regular.woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  src: url("../fonts/OpenSans/OpenSans-Light.woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  src: url("../fonts/OpenSans/OpenSans-Semibold.woff"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  src: url("../fonts/OpenSans/OpenSans-Bold.woff"); }
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff"); }
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff"); }
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black.woff"); }
+
+@font-face {
+  font-family: 'Han Sans CN';
+  src: url("../fonts/SourceHanSansCN/SourceHanSansCN-Regular.woff"); }
+
+@font-face {
+  font-family: 'Han Sans CN';
+  font-weight: 300;
+  src: url("../fonts/SourceHanSansCN/SourceHanSansCN-Light.woff"); }
+
+@font-face {
+  font-family: 'Han Sans CN';
+  font-weight: 600;
+  src: url("../fonts/SourceHanSansCN/SourceHanSansCN-Medium.woff"); }
+
+@font-face {
+  font-family: 'Han Sans CN';
+  font-weight: 700;
+  src: url("../fonts/SourceHanSansCN/SourceHanSansCN-Bold.woff"); }
+
+@font-face {
+  font-family: 'Han Sans TW';
+  src: url("../fonts/SourceHanSansTW/SourceHanSansTW-Regular.woff"); }
+
+@font-face {
+  font-family: 'Han Sans TW';
+  font-weight: 300;
+  src: url("../fonts/SourceHanSansTW/SourceHanSansTW-Light.woff"); }
+
+@font-face {
+  font-family: 'Han Sans TW';
+  font-weight: 600;
+  src: url("../fonts/SourceHanSansTW/SourceHanSansTW-Medium.woff"); }
+
+@font-face {
+  font-family: 'Han Sans TW';
+  font-weight: 700;
+  src: url("../fonts/SourceHanSansTW/SourceHanSansTW-Bold.woff"); }
 
 .color-white {
   background: #fff; }
@@ -113,6 +182,7 @@ body {
   color: #252525;
   font-family: "Open Sans";
   font-size: 18px;
+  line-height: 1.4em;
   align-items: center;
   background: #fff;
   display: flex;
@@ -122,17 +192,18 @@ body {
   body h1 {
     color: #003057;
     font-family: "Playfair Display";
-    font-size: 38px;
+    font-size: 48px;
     font-weight: normal; }
   body h2 {
     color: #007fa3;
     font-family: "Playfair Display";
-    font-size: 21px; }
+    font-size: 28px; }
   body p {
     margin-top: 1em;
     color: #252525;
     font-family: "Open Sans";
-    font-size: 18px; }
+    font-size: 18px;
+    line-height: 1.4em; }
   body a {
     color: #74797b;
     text-decoration: none; }
@@ -204,6 +275,7 @@ body {
       color: #252525;
       font-family: "Open Sans";
       font-size: 18px;
+      line-height: 1.4em;
       margin: 0 10px; }
       body .page .main .content article {
         margin: 0 0 100px 0; }
@@ -248,11 +320,18 @@ body {
     body .page .main .typo-section .playfair-typo-demo {
       font-family: "Playfair Display";
       font-size: 4em;
-      color: #007fa3; }
+      color: #007fa3;
+      padding: 0.5em 0; }
     body .page .main .typo-section .open-sans-typo-demo {
       font-family: "Open Sans";
+      font-size: 3em;
+      color: #007fa3;
+      padding: 0.5em 0; }
+    body .page .main .typo-section .han-sans-typo-demo {
+      font-family: "Han Sans CN";
       font-size: 4em;
-      color: #007fa3; }
+      color: #007fa3;
+      padding: 0.5em 0; }
     body .page .main .griddy {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

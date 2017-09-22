@@ -63,8 +63,9 @@ module.exports = (grunt) => {
         files: [
           {expand: true, cwd: 'app/assets', src: ['images/**'], dest: 'dist'},
           {expand: true, cwd: 'app/assets', src: ['less/*'], dest: 'dist'},
-          {expand: true, cwd: 'app/assets', src: ['scss/*'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['scss/**'], dest: 'dist'},
           {expand: true, cwd: 'app/assets', src: ['stylus/*'], dest: 'dist'},
+          {expand: true, cwd: 'app/assets', src: ['fonts/**'], dest: 'dist'},
         ]
       },
       docs: {
@@ -72,6 +73,7 @@ module.exports = (grunt) => {
           {expand: true, cwd: 'dist', src: ['images/logos/svg/**'], dest: 'docs/assets'},
           {expand: true, cwd: 'dist', src: ['images/*'], dest: 'docs/assets'},
           {expand: true, cwd: 'dist', src: ['styles/**'], dest: 'docs/assets'},
+          {expand: true, cwd: 'dist', src: ['fonts/**'], dest: 'docs/assets'},
           {expand: true, cwd: 'app', src: ['*.html'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.js'], dest: 'docs'},
           {expand: true, cwd: 'app', src: ['*.svg'], dest: 'docs/assets/images'},
