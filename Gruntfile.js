@@ -41,7 +41,8 @@ module.exports = (grunt) => {
         options : {
           data : {
             livereload: '<script src="//localhost:35729/livereload.js"></script>',
-            colors: pc_colors
+            colors: pc_colors,
+            GA: ''
           }
         },
         src: 'app/index.html.hbs',
@@ -51,7 +52,8 @@ module.exports = (grunt) => {
         options : {
           data : {
             livereload: '',
-            colors: pc_colors
+            colors: pc_colors,
+            GA: "<script async src='https://www.googletagmanager.com/gtag/js?id=UA-107070818-1'></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)};gtag('js', new Date());gtag('config', 'UA-107070818-1');</script>"
           }
         },
         src: 'app/index.html.hbs',
@@ -125,7 +127,8 @@ module.exports = (grunt) => {
       }
     }
   });
-
-  grunt.registerTask('build', ['clean:dist', 'clean:docs', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs', 'writefile:documentationDist', 'writefile:documentationDev', 'sass:docs', 'copy:dist', 'copy:docs']);
+  grunt.registerTask('prebuild', ['clean:dist', 'clean:docs', 'writefile:sass', 'writefile:less', 'writefile:stylus', 'writefile:styles4docs']);
+  grunt.registerTask('build', ['prebuild', 'writefile:documentationDev', 'sass:docs', 'copy:dist', 'copy:docs']);
+  grunt.registerTask('production_build', ['prebuild', 'writefile:documentationDist', 'sass:docs', 'copy:dist', 'copy:docs']);
   grunt.registerTask('default', ['build', 'writefile:documentationDev', 'express:dist', 'watch']);
 };
