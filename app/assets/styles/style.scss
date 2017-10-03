@@ -212,6 +212,25 @@ body {
         }
       }
 
+      .favicons-section{
+        .favicon-box{
+          display: flex;
+          flex-direction: row;
+          margin-top: 2em;
+          img{
+            margin: 1em;
+          }
+        }
+      }
+
+      pre.prettyprint, code.prettyprint {
+        font-size: 0.8em; 
+        line-height: 1.4em;
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+      }
+
       .griddy{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -220,7 +239,7 @@ body {
         margin-top:1em;
       }
 
-      .griddy section, .font-box{
+      .griddy section, .font-box, .favicon-box{
         box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
         background-color: white;
       }

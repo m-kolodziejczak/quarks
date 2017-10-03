@@ -332,13 +332,25 @@ body {
       font-size: 4em;
       color: #007fa3;
       padding: 0.5em 0; }
+    body .page .main .favicons-section .favicon-box {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2em; }
+      body .page .main .favicons-section .favicon-box img {
+        margin: 1em; }
+    body .page .main pre.prettyprint, body .page .main code.prettyprint {
+      font-size: 0.8em;
+      line-height: 1.4em;
+      margin: 0;
+      border-radius: 0;
+      border: 0; }
     body .page .main .griddy {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 1em;
       grid-row-gap: 1em;
       margin-top: 1em; }
-    body .page .main .griddy section, body .page .main .font-box {
+    body .page .main .griddy section, body .page .main .font-box, body .page .main .favicon-box {
       box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
       background-color: white; }
     body .page .main .font-box {
