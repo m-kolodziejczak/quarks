@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Pearson Quarks</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
     <link rel="stylesheet" href="assets/styles/style.css">
     {{{ GA }}}
     <script type="text/javascript" src="./quarks-visualisation.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/skins/sunburst.css">
     {{{ livereload }}}
 </head>
 <body onload="init()">
@@ -20,8 +26,11 @@
                 <a href="#color">
                     Color
                 </a>
-                <a href="#typography">
-                    Typography
+                <a href="#fonts">
+                    Fonts
+                </a>
+                <a href="#favicons">
+                    Favicon
                 </a>
                 <a href="https://github.com/PearsonEnglish/quarks">
                     <img src="assets/images/github.svg" height="44">
@@ -218,9 +227,9 @@
                 </section>
                 {{/each}}
             </article>
-            <article id="typography" class="typo-section">
+            <article class="typo-section">
                 <div class="article-heading">
-                    <h1 id="typography">Typography</h1>
+                    <h1 id="fonts">Fonts</h1>
                     <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/scss/_typography.scss">
                         <img src="assets/images/github.svg" height="44">
                     </a>
@@ -270,9 +279,56 @@
                     </p>
                 </section>
             </article>
+            <article class="favicons-section">
+                <div class="article-heading">
+                    <h1 id="favicons">Favicons</h1>
+                    <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/scss/_typography.scss">
+                        <img src="assets/images/github.svg" height="44">
+                    </a>
+                </div>
+                
+                <p>Set of favicons for browsers, ios, android and windows apps</p>
+               
+                <section class="favicon-box">
+                    <img src="assets/favicons/android-chrome-192x192.png" width="192" alt="Favicon Android 192x192">
+                    <pre class="prettyprint">
+                        <code id="faviconhtml" class="language-html">
+<!-- Insert this code into your <head> section -->
+<link rel="apple-touch-icon" sizes="180x180" href="{your_favicon_path}/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{your_favicon_path}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{your_favicon_path}/favicon-16x16.png">
+<link rel="manifest" href="{your_favicon_path}/manifest.json">
+<link rel="mask-icon" href="{your_favicon_path}/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">              
+                        </code>
+                    </pre>
+                </section>
+            </article>
         </div>
     </div>
 </div>
+<script type="text/javascript">//<![CDATA[
+    (function () {
+      function htmlEscape(s) {
+        return s
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+      }
+
+      // this page's own source code
+      var faviconHtml = htmlEscape(document.getElementById("faviconhtml").innerHTML);
+
+      // Highlight the operative parts:
+      faviconHtml = faviconHtml.replace(
+        /&lt;script src[\s\S]*?&gt;&lt;\/script&gt;|&lt;!--\?[\s\S]*?--&gt;|&lt;pre\b[\s\S]*?&lt;\/pre&gt;/g,
+        '<span class="operative">$&<\/span>');
+
+      // insert into PRE
+      document.getElementById("faviconhtml").innerHTML = faviconHtml;
+    })();
+    //]]>
+</script>
 </body>
 <script>
   function init() {
