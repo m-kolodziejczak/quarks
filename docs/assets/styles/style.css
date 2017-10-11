@@ -100,32 +100,35 @@ ol, ul {
   font-weight: 700;
   src: url("../fonts/SourceHanSansTW/SourceHanSansTW-Bold.woff"); }
 
+.color-blue-pearson {
+  background: #007fa3; }
+
 .color-white {
   background: #fff; }
 
 .color-black {
   background: #000; }
 
-.color-blue-pearson {
-  background: #007fa3; }
-
 .color-blue-midnight {
   background: #003057; }
-
-.color-blue-ice {
-  background: #d4eae4; }
-
-.color-blue-ink {
-  background: #005a70; }
-
-.color-turquoise-marine {
-  background: #12b2a6; }
 
 .color-green-lime {
   background: #d2db0e; }
 
+.color-blue-ice {
+  background: #d4eae4; }
+
+.color-gray-graphite {
+  background: #505759; }
+
+.color-blue-ink {
+  background: #005a70; }
+
 .color-green-grass {
   background: #008638; }
+
+.color-turquoise-marine {
+  background: #12b2a6; }
 
 .color-green-fresh {
   background: #84bd00; }
@@ -144,9 +147,6 @@ ol, ul {
 
 .color-yellow-sunshine {
   background: #ffb81c; }
-
-.color-gray-graphite {
-  background: #505759; }
 
 .color-blue-digital {
   background: #047a9c; }
@@ -186,6 +186,7 @@ body {
   align-items: center;
   background: #fff;
   display: flex;
+  width: 100%;
   justify-content: center;
   margin: 0;
   padding: 0; }
@@ -244,126 +245,140 @@ body {
     body .claim h1 {
       padding: 0;
       margin: 0.5em; }
-  body .benefits {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    body .benefits section {
-      width: 30%; }
-  @media screen and (min-device-width: 960px) and (min-width: 960px) {
-    body .page {
-      width: 960px; } }
-  body .page header {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-    height: 84px;
+  body .page {
     width: 100%; }
-  body .page .product-name {
-    align-items: center;
-    background: #f5f5f5;
-    display: flex;
-    height: 47px;
-    margin: 0 0 77px 0;
-    padding: 0 47px; }
-  body .page .main {
-    display: flex;
-    flex-direction: column; }
-    body .page .main .content {
-      color: #252525;
-      font-family: "Open Sans";
-      font-size: 18px;
-      line-height: 1.4em;
-      margin: 0 10px; }
-      body .page .main .content article {
-        margin: 0 0 100px 0; }
-        body .page .main .content article .avatar {
-          display: flex;
-          justify-content: center; }
-        body .page .main .content article .article-heading {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between; }
-    body .page .main .logo-section h2, body .page .main .color-section h2 {
-      margin: 2em 0; }
-    body .page .main .logo-section .card-content {
-      padding: 2em;
-      text-align: center; }
-    body .page .main .logo-section .card-actions {
-      border-top: 1px solid #d3d3d3;
-      padding: 2em;
-      display: flex;
+    body .page .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto; }
+    body .page .container.warc {
+      padding-top: 1em; }
+    body .page #welcome {
+      position: relative;
+      margin-bottom: 150px; }
+    body .page #welcome::after {
+      content: "";
+      background-image: url(https://www.pearson.com/etc/clientlibs/one-dot-com/one-dot-com/dev/assets/HP_Hero_Curve_Shape.svg);
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100vw;
+      position: absolute;
+      bottom: -150px;
+      left: 0;
+      z-index: 0;
+      display: block; }
+    body .page header {
+      align-items: center;
       flex-direction: row;
-      justify-content: space-around; }
-    body .page .main .logo-section .logo-container {
+      justify-content: space-between;
       display: flex;
-      padding: 2em;
-      justify-content: center; }
-      body .page .main .logo-section .logo-container.dark {
-        background: #636769; }
-    body .page .main .logo-section img {
-      max-height: 72px; }
-    body .page .main .color-section h3 {
-      margin: 2em 0; }
-    body .page .main .color-section .color-list.griddy {
-      grid-template-columns: 1fr 1fr 1fr 1fr; }
-    body .page .main .color-section .color-marker {
-      width: 100px;
+      height: 84px;
+      width: 100%; }
+    body .page .main-content {
+      background-color: #f5f5f5; }
+    body .page .product-name {
+      align-items: center;
+      background: #f5f5f5;
+      display: flex;
+      height: 47px;
+      margin: 0 0 77px 0;
+      padding: 0 47px; }
+    body .page .main {
+      display: flex;
+      flex-direction: column; }
+      body .page .main .content {
+        color: #252525;
+        font-family: "Open Sans";
+        font-size: 18px;
+        line-height: 1.4em; }
+        body .page .main .content article {
+          margin-bottom: 100px; }
+          body .page .main .content article .avatar {
+            display: flex;
+            justify-content: center; }
+          body .page .main .content article .article-heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+      body .page .main .logo-section h2, body .page .main .color-section h2 {
+        margin: 2em 0; }
+      body .page .main .logo-section .card-content {
+        padding: 2em;
+        text-align: center; }
+      body .page .main .logo-section .card-actions {
+        border-top: 1px solid #d3d3d3;
+        padding: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+      body .page .main .logo-section .logo-container {
+        display: flex;
+        padding: 2em;
+        justify-content: center; }
+        body .page .main .logo-section .logo-container.dark {
+          background: #636769; }
+      body .page .main .logo-section img {
+        max-height: 72px; }
+      body .page .main .color-section h3 {
+        margin: 2em 0; }
+      body .page .main .color-section .color-list.griddy {
+        grid-template-columns: 1fr 1fr 1fr 1fr; }
+      body .page .main .color-section .color-marker {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px; }
+      body .page .main .color-section .color-marker.color-white {
+        border: 1px solid #636769; }
+      body .page .main .typo-section .font-box {
+        margin-top: 2em; }
+      body .page .main .typo-section .playfair-typo-demo {
+        font-family: "Playfair Display";
+        font-size: 4em;
+        color: #007fa3;
+        padding: 0.5em 0; }
+      body .page .main .typo-section .open-sans-typo-demo {
+        font-family: "Open Sans";
+        font-size: 3em;
+        color: #007fa3;
+        padding: 0.5em 0; }
+      body .page .main .typo-section .han-sans-typo-demo {
+        font-family: "Han Sans CN";
+        font-size: 4em;
+        color: #007fa3;
+        padding: 0.5em 0; }
+      body .page .main .favicons-section .favicon-box {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2em; }
+        body .page .main .favicons-section .favicon-box img {
+          margin: 1em; }
+      body .page .main pre.prettyprint, body .page .main code.prettyprint {
+        font-size: 0.8em;
+        line-height: 1.4em;
+        margin: 0;
+        border-radius: 0;
+        border: 0; }
+      body .page .main .griddy {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+        margin-top: 1em; }
+      body .page .main .griddy section, body .page .main .font-box, body .page .main .favicon-box, body .page .main .box {
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        background-color: white; }
+      body .page .main .font-box, body .page .main .benefits .box, body .page .main .color-list .box {
+        padding: 2em; }
+    body .page footer {
+      color: #fff;
+      font-family: "Open Sans";
+      font-size: 12px;
+      align-items: center;
+      background: #636769;
+      display: flex;
       height: 100px;
-      border-radius: 50px; }
-    body .page .main .color-section .color-marker.color-white {
-      border: 1px solid #636769; }
-    body .page .main .typo-section .font-box {
-      margin-top: 2em; }
-    body .page .main .typo-section .playfair-typo-demo {
-      font-family: "Playfair Display";
-      font-size: 4em;
-      color: #007fa3;
-      padding: 0.5em 0; }
-    body .page .main .typo-section .open-sans-typo-demo {
-      font-family: "Open Sans";
-      font-size: 3em;
-      color: #007fa3;
-      padding: 0.5em 0; }
-    body .page .main .typo-section .han-sans-typo-demo {
-      font-family: "Han Sans CN";
-      font-size: 4em;
-      color: #007fa3;
-      padding: 0.5em 0; }
-    body .page .main .favicons-section .favicon-box {
-      display: flex;
-      flex-direction: row;
-      margin-top: 2em; }
-      body .page .main .favicons-section .favicon-box img {
-        margin: 1em; }
-    body .page .main pre.prettyprint, body .page .main code.prettyprint {
-      font-size: 0.8em;
-      line-height: 1.4em;
-      margin: 0;
-      border-radius: 0;
-      border: 0; }
-    body .page .main .griddy {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 1em;
-      grid-row-gap: 1em;
-      margin-top: 1em; }
-    body .page .main .griddy section, body .page .main .font-box, body .page .main .favicon-box {
-      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-      background-color: white; }
-    body .page .main .font-box {
-      padding: 2em; }
-  body .page footer {
-    color: #fff;
-    font-family: "Open Sans";
-    font-size: 12px;
-    align-items: center;
-    background: #636769;
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    text-align: center; }
+      justify-content: center;
+      text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

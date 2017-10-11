@@ -16,7 +16,7 @@
 </head>
 <body onload="init()">
 <div class="page">
-    <header>
+    <header class="container">
         <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Blk_RGB.svg" alt="Pearson logo">
         <div class="menu">
             <nav>
@@ -42,268 +42,295 @@
         <!---->
         <div class="content">
             <article id="welcome">
-                <div class="avatar">
-                    <canvas id="canvasOne" width="280" height="280" ></canvas>
-                </div>
+                <div class="container">
+                    <div class="avatar">
+                        <canvas id="canvasOne" width="280" height="280" ></canvas>
+                    </div>
 
-                <div class="claim">
-                    <h1>Pearson Quarks</h1>
-                    <h2>Pearson brand assets for software development</h2>
-                </div>
+                    <div class="claim">
+                        <h1>Pearson Quarks</h1>
+                        <h2>Pearson brand assets for software development</h2>
+                        <p>
+                            During UI development in Pearson English we are following Atomic Design philosophy. Dealing with large scale projects we discovered that we need low level UI library that will provide brand convergence between web, desktop and native mobile apps. Quarks are brand assets that can be used across platforms and technologies and a single point of reference.
+                        </p>
 
-                <div class="benefits">
-                    <section>
-                        <h2>Quick project bootsraping</h2>
                         <p>
-                            Get all brand resources you need on start of digital products development and save your time for searching and writing simple code.
+                        Quarks are available on <strong>NPM</strong> as <em>pearson-quarks</em>.
                         </p>
-                    </section>
-                    <section>
-                        <h2>Technology Independent</h2>
-                        <p>
-                            Use with web and native apps. Color palettes and mixins are available in LESS, SASS, Stylus, and XML. Quarks don’t depend on any libraries or frameworks.    
-                        </p>
-                    </section>
-                    <section>
-                        <h2>Simple & flexible</h2>
-                        <p>
-                            Get visuals assets from CDN or download them and host by yourself. Don’t waste your time for graphics and font format conversion.   
-                        </p>
-                    </section>
+                    </div>
                 </div>
             </article>
-            <article class="gray-bg logo-section">
-                <div class="article-heading">
-                    <h1 id="logo">Logo</h1>
-                    <a href="https://github.com/PearsonEnglish/quarks/tree/master/app/assets/images/logos">
-                        <img src="assets/images/github.svg" height="44">
-                    </a>
-                </div>
-                <p>The primary version of our logo should be used wherever possible. Where the primary version is not
-                appropriate, e.g, in digital environments or where there is restrictive space, we also have a horizontal
-                version.</p>
+            <div class="main-content">
+                <article id="benefits">
+                    <div class="benefits container warc griddy">
+                        <section class="box">
+                            <h2>Quick project bootsraping</h2>
+                            <p>
+                                Get all brand resources you need on start of digital product development. Save your time on visual assets format conversion and searching for information.
+                            </p>
+                        </section>
+                        <section class="box">
+                            <h2>Works for web & native</h2>
+                            <p>
+                                Use with web and native apps. Assets and the code is available in formats and languages needed for all platforms. Quarks don’t have any dependency to other libraries and frameworks.
+                            </p>
+                        </section>
+                        <section class="box">
+                            <h2>Simple & easy to use</h2>
+                            <p>
+                                Project is public as pearson brand is. Share it with developers and designers by passing a link. Install library via package manager or just download it from github. 
+                            </p>
+                        </section>
+                    </div>
+                </article>
+            
+                <article class="container gray-bg logo-section">
+                    <div class="article-heading">
+                        <h1 id="logo">Logo</h1>
+                        <a href="https://github.com/PearsonEnglish/quarks/tree/master/app/assets/images/logos">
+                            <img src="assets/images/github.svg" height="44">
+                        </a>
+                    </div>
+                    <p>We do have two versions of logo - primary and horizontal. Primary logo should used when it is possible. For digital environment horizontal version is preffered choice. Each logo have four variations to use in color, mochrome, dark and light backgrounds. All of them are available in SVG and PNG version.</p>
 
-                <h2>Primary Logo</h2>
+                    <h2>Primary Logo</h2>
 
-                <div class="griddy">
-                    <section>
-                        <div class="logo-container">
-                        <img src="assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg" alt="Logo Horizontal Mono White">
-                            </div>
-                        <div class="card-content">
-                        <h3>Primary Black</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    
-                    </section>
-                    <section>
-                        <div class="logo-container">
-                        <img src="assets/images/logos/svg/PearsonLogo_Primary_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono White">
-                            </div>
-                        <div class="card-content">   
-                        <h3>Primary Mono Black</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="logo-container dark">
-                        <img src="assets/images/logos/svg/PearsonLogo_Primary_W_RGB.svg" alt="Logo Horizontal Mono White">
-                            </div>
-                        <div class="card-content">    
-                            <h3>Primary White</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="logo-container dark">
-                        <img src="assets/images/logos/svg/PearsonLogo_Primary_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
-                            </div>
-                        <div class="card-content">   
-                        <h3>Primary Mono White</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-                </div>
+                    <p>The primary logo should be used when there is no space restriction</p>
 
-                <h2>Horizontal Logo</h2>
+                    <div class="griddy">
+                        <section>
+                            <div class="logo-container">
+                            <img src="assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg" alt="Logo Horizontal Mono White">
+                                </div>
+                            <div class="card-content">
+                            <h3>Primary Black</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        
+                        </section>
+                        <section>
+                            <div class="logo-container">
+                            <img src="assets/images/logos/svg/PearsonLogo_Primary_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono White">
+                                </div>
+                            <div class="card-content">   
+                            <h3>Primary Mono Black</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="logo-container dark">
+                            <img src="assets/images/logos/svg/PearsonLogo_Primary_W_RGB.svg" alt="Logo Horizontal Mono White">
+                                </div>
+                            <div class="card-content">    
+                                <h3>Primary White</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="logo-container dark">
+                            <img src="assets/images/logos/svg/PearsonLogo_Primary_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
+                                </div>
+                            <div class="card-content">   
+                            <h3>Primary Mono White</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                    </div>
 
-                <div class="griddy">
-                    <section>
-                        <div class="logo-container">
-                        <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Blk_RGB.svg" alt="Logo Horizontal">
-                        </div>
-                        <div class="card-content">
-                        <h3>Horizontal Black</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
+                    <h2>Horizontal Logo</h2>
+
+                    <p>The horizontal logo is the preferred choice for digital uses to ensure maximum standout in small areas. Our preferred position of the logo is in the top left-hand side, but when content, context, and usability of your digital touchpoint restricts this (e.g., mobile), use your best judgment to achieve logo standout.</p>
+
+                    <div class="griddy">
+                        <section>
+                            <div class="logo-container">
+                            <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Blk_RGB.svg" alt="Logo Horizontal">
+                            </div>
+                            <div class="card-content">
+                            <h3>Horizontal Black</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                       
+                        <section>
+                            <div class="logo-container">
+                            <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono">
+                                </div>
+                            <div class="card-content">
+                            <h3>Horizontal Black Mono</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="logo-container dark">
+                            <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
+                                </div>
+                            <div class="card-content">
+                            <h3>Horizontal White Mono</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="logo-container dark">
+                            <img src="assets/images/logos/svg/PearsonLogo_Horizontal_W_RGB.svg" alt="Logo Horizontal White">
+                            </div>
+                            <div class="card-content">
+                            <h3>Horizontal White</h3>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
+                                <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
+                            </div>
+                        </section>
                    
+                    </div>
+                </article>
+                <article class="container color-section">
+
+                    <div class="article-heading">
+                        <h1 id="color">Color</h1>
+                        <a href="https://github.com/PearsonEnglish/quarks/blob/master/app/assets/scss/_colorPalette.scss">
+                            <img src="assets/images/github.svg" height="44">
+                        </a>
+                    </div>
+                    
+                    <p>
+                    These are our official brand colors and few additional used in web apps. Colors are availble LESS, SASS and Stylus to use in web projects. If you need any other format please inform us or contribute with your template.</p>
+
+                    {{#each colors.palettes}}
                     <section>
-                        <div class="logo-container">
-                        <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Mono_Blk_RGB.svg" alt="Logo Horizontal Mono">
+                        <h2>{{this.name}}</h2>
+
+                        <p>{{this.description}}</p>
+
+                        <ul class="color-list griddy">
+                        {{#each colors}}
+                        <li class="box">
+                            <div class="color-marker color-{{@key}}">
+
                             </div>
-                        <div class="card-content">
-                        <h3>Horizontal Black Mono</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="logo-container dark">
-                        <img src="assets/images/logos/svg/PearsonLogo_Horizontal_Mono_W_RGB.svg" alt="Logo Horizontal Mono White">
-                            </div>
-                        <div class="card-content">
-                        <h3>Horizontal White Mono</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="logo-container dark">
-                        <img src="assets/images/logos/svg/PearsonLogo_Horizontal_W_RGB.svg" alt="Logo Horizontal White">
-                        </div>
-                        <div class="card-content">
-                        <h3>Horizontal White</h3>
-                        </div>
-                        <div class="card-actions">
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/svg/PearsonLogo_Primary_Blk_RGB.svg">SVG</a>
-                            <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/images/logos/png/PearsonLogo_Primary_Blk_RGB.png">PNG</a>
-                        </div>
-                    </section>
-               
-                </div>
-            </article>
-            <article class="color-section">
-
-                <div class="article-heading">
-                    <h1 id="color">Color</h1>
-                    <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/scss/_colorPalette.scss">
-                        <img src="assets/images/github.svg" height="44">
-                    </a>
-                </div>
-                
-                <p>
-                Color brings a design to life. Color is versatile; it's used to express emotion and tone, as well as
-                place emphasis and create associations. Color should always be used in meaningful and intentional ways
-                in order to create patterns and visual cues.</p>
-
-                {{#each colors.palettes}}
-                <section>
-                    <h2>{{this.name}}</h2>
-
-                    <ul class="color-list griddy">
-                    {{#each colors}}
-                    <li>
-                        <div class="color-marker color-{{@key}}">
-
-                        </div>
-                        <h3>{{this.name}}</h3>
-                        <ul>
-                            <li>{{toHex this.hex}}</li>
-                            <li>$pc-color-{{@key}}</li>
+                            <h3>{{this.name}}</h3>
+                            <ul>
+                                <li>{{toHex this.hex}}</li>
+                                <li>$pc-color-{{@key}}</li>
+                            </ul>
+                        </li>
+                        {{/each}}
                         </ul>
-                    </li>
+                    </section>
                     {{/each}}
-                    </ul>
-                </section>
-                {{/each}}
-            </article>
-            <article class="typo-section">
-                <div class="article-heading">
-                    <h1 id="fonts">Fonts</h1>
-                    <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/assets/scss/_typography.scss">
-                        <img src="assets/images/github.svg" height="44">
-                    </a>
-                </div>
-                <p>
-                Our brand typefaces are Playfair Display and Open Sans. Using both serif and sans serif typefaces gives
-                us the flexibility to cover our wide range of audiences and communications.</p>
-                <section class="font-box">
-                    <div class="playfair-typo-demo">
-                        Playfair display
+                </article>
+                <article class="container typo-section">
+                    <div class="article-heading">
+                        <h1 id="fonts">Fonts</h1>
+                        <a href="https://github.com/PearsonEnglish/quarks/tree/master/app/assets/fonts">
+                            <img src="assets/images/github.svg" height="44">
+                        </a>
                     </div>
-
                     <p>
-                    Use for headings in marketing material and simple webistes
-                    </p>
+                    Our brand typefaces are Playfair Display and Open Sans. Using both serif and sans serif typefaces gives us the flexibility to cover our wide range of audiences and communications.</p>
 
-                    <p>
-                        $pc-font-playfair
-                    </p>
-                </section>
+                    <section class="font-box">
+                        <div class="open-sans-typo-demo">
+                            Open Sans
+                        </div>
 
-                <section class="font-box">
-                    <div class="open-sans-typo-demo">
-                        Open Sans
+                        <p>
+                        This is default font for body copy in digital environment. 
+                        </p>
+
+                        <p>
+                        <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/fonts/OpenSans/LICENSE.txt">License Text</a>
+                        </p>
+
+                        <p>
+                            $pc-font-open-sans
+                        </p>
+                    </section>
+
+                    <section class="font-box">
+                        <div class="playfair-typo-demo">
+                            Playfair display
+                        </div>
+
+                        <p>
+                        Use for headings in marketing websites, splash screens etc.
+                        </p>
+
+                        <p>
+                        <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/fonts/PlayfairDisplay/OFL.txt">License Text</a>
+                        </p>
+
+                        <p>
+                            $pc-font-playfair
+                        </p>
+                    </section>
+
+                    <section class="font-box">
+                        <div class="han-sans-typo-demo">
+                            中文
+                        </div>
+
+                        <p>
+                        Use for apps and websites localised for China
+                        </p>
+
+                        <p>
+                        <a href="https://github.com/PearsonEnglish/quarks/blob/master/dist/fonts/PlayfairDisplay/OFL.txt">License Text</a>
+                        </p>
+
+                        <p>
+                            $pc-font-chinese-simple
+                        </p>
+                    </section>
+                </article>
+                <article class="container favicons-section">
+                    <div class="article-heading">
+                        <h1 id="favicons">Favicons</h1>
+                        <a href="https://github.com/PearsonEnglish/quarks/tree/master/app/assets/favicons">
+                            <img src="assets/images/github.svg" height="44">
+                        </a>
                     </div>
-
-                    <p>
-                    Use for body and and headings in apps
-                    </p>
-
-                    <p>
-                        $pc-font-open-sans
-                    </p>
-                </section>
-
-                <section class="font-box">
-                    <div class="han-sans-typo-demo">
-                        中文
-                    </div>
-
-                    <p>
-                    Use for apps and websites localised for China
-                    </p>
-
-                    <p>
-                        $pc-font-chinese-simple
-                    </p>
-                </section>
-            </article>
-            <article class="favicons-section">
-                <div class="article-heading">
-                    <h1 id="favicons">Favicons</h1>
-                    <a href="https://github.com/PearsonEnglish/quarks/tree/master/app/assets/favicons">
-                        <img src="assets/images/github.svg" height="44">
-                    </a>
-                </div>
-                
-                <p>Set of favicons for browsers, ios, android and windows apps</p>
-               
-                <section class="favicon-box">
-                    <img src="assets/favicons/android-chrome-192x192.png" width="192" alt="Favicon Android 192x192">
-                    <pre class="prettyprint">
-                        <code id="faviconhtml" class="language-html">
-<!-- Insert this code into your <head> section -->
-<link rel="apple-touch-icon" sizes="180x180" href="{your_favicon_path}/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{your_favicon_path}/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{your_favicon_path}/favicon-16x16.png">
-<link rel="manifest" href="{your_favicon_path}/manifest.json">
-<link rel="mask-icon" href="{your_favicon_path}/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">              
-                        </code>
-                    </pre>
-                </section>
-            </article>
+                    
+                    <p>Set of favicons for browsers, ios, android and windows apps</p>
+                   
+                    <section class="favicon-box">
+                        <img src="assets/favicons/android-chrome-192x192.png" width="192" alt="Favicon Android 192x192">
+                        <pre class="prettyprint">
+                            <code id="faviconhtml" class="language-html">
+    <!-- Insert this code into your <head> section -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{your_favicon_path}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{your_favicon_path}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{your_favicon_path}/favicon-16x16.png">
+    <link rel="manifest" href="{your_favicon_path}/manifest.json">
+    <link rel="mask-icon" href="{your_favicon_path}/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">              
+                            </code>
+                        </pre>
+                    </section>
+                </article>
+            </div>
         </div>
     </div>
 </div>

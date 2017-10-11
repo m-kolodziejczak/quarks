@@ -9,6 +9,7 @@ body {
   align-items: center;
   background: $pc-color-white;
   display: flex;
+  width:100%;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -73,22 +74,40 @@ body {
       margin:0.5em;
     }
   }
-  .benefits{
-    margin-top:2em;
-
-    display: flex;
-    flex-direction: row;
-    //align-items: center;
-    justify-content: space-between;
-
-    section {
-      width: 30%;
-    }
-  }
   .page {
-    @media screen and (min-device-width: $page-size) and (min-width: $page-size) {
-      width: $page-size;
+
+    width: 100%;
+
+    .container{
+      width:100%;
+      max-width: 1200px;
+      margin: 0 auto
     }
+
+    .container.warc{
+      padding-top:1em;
+    }
+
+    #welcome{
+      position: relative;
+      margin-bottom: 150px;
+    }
+
+    #welcome::after{
+        content: "";
+        background-image: url(https://www.pearson.com/etc/clientlibs/one-dot-com/one-dot-com/dev/assets/HP_Hero_Curve_Shape.svg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        height:100%;
+        width:100vw;
+        position:absolute;
+        bottom:-150px;
+        left:0;
+        z-index: 0;
+        display: block;
+    }
+    
+
     header {
       align-items: center;
       flex-direction: row;
@@ -98,6 +117,11 @@ body {
       //padding: 0 47px;
       width: 100%;
     }
+
+    .main-content{
+      background-color: $pc-color-white-cool;
+    }
+
     .product-name{
       align-items: center;
       background: $pc-color-white-cool;
@@ -112,10 +136,9 @@ body {
 
       .content {
         @include pearson-quarks--standard-font();
-        margin: 0 10px;
-
+        
         article {
-          margin: 0 0 100px 0;
+          margin-bottom: 100px;
           .avatar{
             display: flex;
             justify-content: center;
@@ -239,12 +262,12 @@ body {
         margin-top:1em;
       }
 
-      .griddy section, .font-box, .favicon-box{
+      .griddy section, .font-box, .favicon-box, .box{
         box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
         background-color: white;
       }
 
-      .font-box{
+      .font-box, .benefits .box, .color-list .box{
         padding: 2em;
       }
 

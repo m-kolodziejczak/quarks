@@ -2,47 +2,59 @@
   "palettes": {
     "brand" : {
       "name": "Brand Colors",
+      "description" : "These form our brand logo and play key roles in our communications.",
       "colors": {
-        "white" : {
-          "hex": "#fff",
-          "name" : "white"
-        },
-        "black" : {
-          "hex": "#000",
-          "name" : "black"
-        },
         "blue-pearson" : {
           "hex": "#007fa3",
           "name" : "Pearson Blue"
+        },
+        "white" : {
+          "hex": "#fff",
+          "name" : "Chalk White"
+        },
+        "black" : {
+          "hex": "#000",
+          "name" : "Ink Black"
         }
       }
     },
     "primary" : {
       "name": "Primary Colors",
+      "description" : "Most commonly used on areas that hold our logo, these colors are flexible enough to appear sophisticated or vibrant as required.",
       "colors": {
         "blue-midnight": {
           "hex": "#003057",
           "name": "Midnight Blue"
         },
-        "blue-ice": {
-          "hex": "#d4eae4",
-          "name": "Ice Blue"
-        },
-        "blue-ink": {
-          "hex": "#005a70",
-          "name": "Ink Blue"
-        },
-        "turquoise-marine": {
-          "hex": "#12b2a6",
-          "name": "Marine Turquoise"
-        },
         "green-lime": {
           "hex": "#d2db0e",
           "name": "Lime Green"
         },
+        "blue-ice": {
+          "hex": "#d4eae4",
+          "name": "Ice Blue"
+        },
+        "gray-graphite": {
+          "hex": "#505759",
+          "name": "Grpahite Gray"
+        }, 
+        "blue-ink": {
+          "hex": "#005a70",
+          "name": "Ink Blue"
+        },
         "green-grass": {
           "hex": "#008638",
           "name": "Grass Green"
+        }
+      }
+    }, 
+    "accent" : {
+      "name": "Accent Colors",
+      "description" : "These bright colors allow us to draw attention to specific pieces of information, e.g., digital navigation buttons and calls to action. They should not be used as background colors, or across larger areas.",
+      "colors": {
+        "turquoise-marine": {
+          "hex": "#12b2a6",
+          "name": "Marine Turquoise"
         },
         "green-fresh": {
           "hex": "#84bd00",
@@ -67,15 +79,12 @@
         "yellow-sunshine": {
           "hex": "#ffb81c",
           "name": "Sunshine Yellow"
-        }, 
-        "gray-graphite": {
-          "hex": "#505759",
-          "name": "Grpahite Gray"
-        } 
+        }
       }
     }, 
     "digital": {
       "name" : "Digital Colors",
+      "description" : "These are additional colors that are variation of official color palette - (Pearson Blue, Marine Turquoise).",
       "colors": {
         "blue-digital": {
           "hex": "#047a9c",
@@ -88,7 +97,13 @@
         "green-tealish-shade": {
           "hex": "#bce9e8",
           "name": "Tealish Green Shade"
-        },
+        }
+      }
+    },
+    "digital-gray": {
+      "name" : "Digital Grays",
+      "description" : "These are shades of gray used in digital products.",
+      "colors": {
         "white-cool": {
           "hex": "#f5f5f5",
           "name": "Cool White"
