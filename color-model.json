@@ -84,7 +84,7 @@
     }, 
     "digital": {
       "name" : "Digital Colors",
-      "description" : "These are additional colors that are variation of official color palette &mdash; Pearson Blue, Marine Turquoise.",
+      "description" : "These are additional colors that are variation of official color palette - Pearson Blue, Marine Turquoise.",
       "colors": {
         "blue-digital": {
           "hex": "#047a9c",
